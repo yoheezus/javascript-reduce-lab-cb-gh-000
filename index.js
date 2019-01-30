@@ -28,6 +28,6 @@ var wordCountMap = monologueLines.reduce(monologueLines.map(), 0)
 function wordCounter(collection, value, index,) {
         var wordCount = value.split(" ").length
         var counter = 1
-        var wordCountObject = Object.assign({}, [wordCount]: counter)
+        var wordCountObject = Object.assign({}, {[wordCount]: counter})
         return wordCountObject
 }
