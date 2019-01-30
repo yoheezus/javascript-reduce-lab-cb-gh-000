@@ -22,7 +22,7 @@ var totalBatteries = batteryBatches.reduce(batteryCounter, 0)
 function batteryCounter(totalAmount, batch) {
     return totalAmount + batch;
 }
-
+// I was stuck on this so I checked the solution, this is the solution given, rewrote to try and understand as a full function
 // var wordCountMap = monologueLines.reduce( (map, sentence) => {
 //     const wordCount = sentence.split(" ").length;
 //
