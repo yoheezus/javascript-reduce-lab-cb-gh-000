@@ -25,9 +25,8 @@ function batteryCounter(totalAmount, batch) {
 
 var wordCountMap = monologueLines.reduce(monologueLines.map(), 0)
 
-function wordCounter(collection, value, index,) {
-        var wordCount = value.split(" ").length
-        var counter = 1
-        var wordCountObject = Object.assign({}, collection, {[wordCount]: counter})
-        return wordCountObject
+function wordCounter(collection, value, index) {
+		var countOfWords = 0
+		var numberOfWords = value.split(" ").length.toString()
+		return Object.assign({}, collection, {[numberOfWords]: value })
 }
