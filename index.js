@@ -23,16 +23,18 @@ function batteryCounter(totalAmount, batch) {
     return totalAmount + batch;
 }
 
-var wordCountMap = monologueLines.reduce( (map, sentence) => {
-    const wordCount = sentence.split(" ").length;
+// var wordCountMap = monologueLines.reduce( (map, sentence) => {
+//     const wordCount = sentence.split(" ").length;
+//
+//     if (!map[wordCount]) {
+//         map[wordCount] = 0;
+//     }
+//     map[wordCount]++;
+//
+//     return map
+// }, {})
 
-    if (!map[wordCount]) {
-        map[wordCount] = 0;
-    }
-    map[wordCount]++;
-
-    return map
-}, {})
+var wordCountMap = monologueLines.reduce(wordCounter, {})
 
 function wordCounter(map, sentence) {
     const wordCount = sentence.split(" ").length;
