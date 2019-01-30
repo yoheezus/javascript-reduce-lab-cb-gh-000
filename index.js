@@ -22,3 +22,11 @@ var totalBatteries = batteryBatches.reduce(batteryCounter, 0)
 function batteryCounter(totalAmount, batch) {
     return totalAmount + batch;
 }
+
+var wordCountMap = monologueLines.reduce(monologueLines.map(), 0)
+
+function wordCounter(collection, value, index,) {
+        var wordCount = value.split(" ").length
+        var counter = 0
+        var wordCountObject = Object.assign({}, [wordCount]: counter)
+}
