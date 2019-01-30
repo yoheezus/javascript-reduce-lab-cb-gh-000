@@ -23,7 +23,7 @@ function batteryCounter(totalAmount, batch) {
     return totalAmount + batch;
 }
 
-var wordCountMap = monologueLines.reduce(wordCounter(map, sentence), {})
+var wordCountMap = monologueLines.reduce(wordCounter({}, sentence), {})
 
 function wordCounter(map, sentence) {
     const wordCount = sentence.split(" ").length;
